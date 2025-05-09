@@ -35,8 +35,8 @@ func TranscriptLinkElement(condition bool) CloseEmbedElement {
 		if !worker.IsWhitelabel {
 			transcriptEmoji = customisation.EmojiTranscript.BuildEmoji()
 		}
-
-		transcriptLink := fmt.Sprintf("https://dashboard.ticketsbot.net/manage/%d/transcripts/view/%d", ticket.GuildId, ticket.Id)
+		//https://tickets.extracted.lol/manage/1370494459577372672/transcripts/view/4
+		transcriptLink := fmt.Sprintf("https://tickets.extracted.lol/manage/%d/transcripts/view/%d", ticket.GuildId, ticket.Id)
 
 		return utils.Slice(component.BuildButton(component.Button{
 			Label: "View Online Transcript",
@@ -129,7 +129,7 @@ func BuildCloseEmbed(
 ) (*embed.Embed, []component.Component) {
 	var formattedReason string
 	if reason == nil {
-		formattedReason = "No reason specified"
+		formattedReason = "No reason has been specified"
 	} else {
 		formattedReason = *reason
 		if len(formattedReason) > 1024 {
