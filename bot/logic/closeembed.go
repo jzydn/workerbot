@@ -39,7 +39,7 @@ func TranscriptLinkElement(condition bool) CloseEmbedElement {
 		transcriptLink := fmt.Sprintf("https://tickets.extracted.lol/manage/%d/transcripts/view/%d", ticket.GuildId, ticket.Id)
 
 		return utils.Slice(component.BuildButton(component.Button{
-			Label: "View Online Transcript",
+			Label: "extracted.lol transcript",
 			Style: component.ButtonStyleLink,
 			Emoji: transcriptEmoji,
 			Url:   utils.Ptr(transcriptLink),
